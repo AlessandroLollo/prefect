@@ -28,7 +28,7 @@
     "@prefecthq/eslint-config": "1.0.31",
     "@vitejs/plugin-vue": "4.3.4",
     "autoprefixer": "10.4.16",
-    "dotenv": "16.3.1",
+    "dotenv": "16.4.2",
     "eslint": "^8.51.0",
     "ts-node": "10.9.1",
     "typescript": "^5.2.2",
