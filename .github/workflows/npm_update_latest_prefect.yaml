@@ -20,7 +20,7 @@
         # required to open a pr with prefect ui changes
         pull-requests: write
       steps:
-        - uses: actions/checkout@v4
+        - uses: actions/checkout@v6
   
         - name: Configure Git
           run: |
