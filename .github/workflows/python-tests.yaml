@@ -97,7 +97,7 @@ jobs:
           echo "image_tag=${tmp}" >> $GITHUB_OUTPUT
 
       - name: Build test image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v7
         with:
           context: .
           # TODO: We do not need the UI in these tests and we may want to add a build-arg to disable building it
@@ -116,7 +116,7 @@ jobs:
           docker run --rm prefecthq/prefect-dev:${{ steps.get_image_tag.outputs.image_tag }} prefect version
 
       - name: Build Conda flavored test image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v7
         with:
           context: .
           build-args: |
@@ -259,7 +259,7 @@ jobs:
           sed -i 's/RUN prefect version/RUN pip install "pydantic<2"\nRUN prefect version/' Dockerfile
 
       - name: Build test image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v7
         with:
           context: .
           # TODO: We do not need the UI in these tests and we may want to add a build-arg to disable building it
@@ -278,7 +278,7 @@ jobs:
           docker run --rm prefecthq/prefect-dev:${{ steps.get_image_tag.outputs.image_tag }} prefect version
 
       - name: Build Conda flavored test image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v7
         with:
           context: .
           build-args: |
@@ -424,7 +424,7 @@ jobs:
           sed -i 's/RUN prefect version/RUN pip install "sqlalchemy[asyncio]<2"\nRUN prefect version/' Dockerfile
 
       - name: Build test image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v7
         with:
           context: .
           # TODO: We do not need the UI in these tests and we may want to add a build-arg to disable building it
@@ -443,7 +443,7 @@ jobs:
           docker run --rm prefecthq/prefect-dev:${{ steps.get_image_tag.outputs.image_tag }} prefect version
 
       - name: Build Conda flavored test image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v7
         with:
           context: .
           build-args: |
@@ -621,7 +621,7 @@ jobs:
           echo "image_tag=${tmp}" >> $GITHUB_OUTPUT
 
       - name: Build test image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v7
         with:
           context: .
           # TODO: We do not need the UI in these tests and we may want to add a build-arg to disable building it
@@ -640,7 +640,7 @@ jobs:
           docker run --rm prefecthq/prefect-dev:${{ steps.get_image_tag.outputs.image_tag }} prefect version
 
       - name: Build Conda flavored test image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v7
         with:
           context: .
           build-args: |
